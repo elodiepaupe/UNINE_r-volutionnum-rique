@@ -1,0 +1,23 @@
+# Quelques informations
+
+Bienvenue sur le GitHub du cours du master en littérature "Histoire du livre et sa révolution (numérique)".
+
+Sur ce dépôt, vous vous trouverez tous les présentations du cours, les données, les exercices et les corrigés.
+
+## Programme
+Cours 5. 29 mars 2021. Intervention de M. Philippe Hebeisen, responsable du DIJU. Atelier 1: HTML et CSS (bases)
+
+Cours 6. 12 avril 2021. Intervention de Mme Amandine Cabrio. 
+
+Cours 7. 19 avril 2021. Atelier 2: HTML et CSS (retour sur exercice et avancé)
+
+Cours 8. 26 avril 2021. Atelier 3: HTML et CSS (retour sur exercice et avancé)
+
+Cours 9. 3 mai 2021. Atelier 4: LaTeX (bases)
+
+Cours 10. 10 mai 2021. Atelier 5: LaTeX (avancé - éditions critiques et bilingues)
+
+Cours 11. 17 mai 2021. Atelier 6:  LaTeX (avancé - théâtre)
+
+## Pour citer ce dépôt
+Élodie Paupe (éd.), Introduction à l'édition numérique (HTML5, CSS3 et LaTeX), Neuchâtel: Université de Neuchâtel, 2021, https://github.com/elodiepaupe/UNINE_revolutionnumerique/.
