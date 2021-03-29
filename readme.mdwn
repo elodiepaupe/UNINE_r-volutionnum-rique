@@ -20,4 +20,4 @@ Cours 10. 10 mai 2021. Atelier 5: LaTeX (avancé - éditions critiques et biling
 Cours 11. 17 mai 2021. Atelier 6:  LaTeX (avancé - théâtre)
 
 ## Pour citer ce dépôt
-Élodie Paupe (éd.), Introduction à l'édition numérique (HTML5, CSS3 et LaTeX), Neuchâtel: Université de Neuchâtel, 2021, https://github.com/elodiepaupe/UNINE_revolutionnumerique/.
+Élodie Paupe (éd.), _Introduction à l'édition numérique (HTML5, CSS3 et LaTeX)_, Neuchâtel: Université de Neuchâtel, 2021, https://github.com/elodiepaupe/UNINE_revolutionnumerique/.
