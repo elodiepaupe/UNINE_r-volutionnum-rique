@@ -1,0 +1,453 @@
+---
+marp: true
+---
+
+Université de Neuchâtel
+Master en littératures
+
+# TG: Histoire du livre et sa troisième révolution (numérique)
+## Cours 5: HTML (bases)
+
+Élodie Paupe 
+chaire de philologie classique et d'histoire ancienne
+
+29 mars 2021
+
+---
+# Théorie 
+
+---
+## HTML: définition et origine
+
+**H** _Hyper..._ 
+**T** _...Text_
+**M** _Markup_
+**L** _Language_
+
+= un langage informatique (≠ un programme informatique) traduit par un navigateur pour un rendu graphique
+= un langage qui structure le contenu avec des balises
+
+... inventé au début des années 90 par Tim Berners-Lee au CERN
+... langage incontournable qui permet de **décrire la structure d'une page web** (et un fichier .epub)
+... pour décrire la présentation d'une page web, on utilisera un autre langage, le CSS
+
+---
+
+## Qui dit langage dit grammaire
+
+* HTML 5 = la 5e version des standards HTML
+* Élaborée sous l'autorité... d'une communauté d'expert·e·s: 
+    >The World Wide Web Consortium (W3C) is an international community that develops open standards to ensure the long-term growth of the Web. 
+    ([W3C](https://www.w3.org))
+
+---
+
+## Ce que permet le HTML
+
+* Publier des documents en ligne avec des titres, du texte, des tableaux, des listes, des photos, etc.
+* Relier des informations entre elles avec des liens hypertextes.
+* Inclure des feuilles de calcul, des clips vidéo, des clips sonores et d'autres applications.
+* Concevoir des formulaires et donc récupérer des informations envoyées par un utilisateur.
+
+--- 
+
+## Ce que le HTML ne permet pas
+
+* Présentation esthétique (CSS, _Cascading Style Sheets_)
+* Ajouter des effets et du dynamisme (JS, _Javascript_)
+
+--- 
+
+## Objectifs du jour: créer une page web
+
+* Créer un fichier HTML
+* Créer un fichier HTML minimal
+* Découvrir quelques balises de structuration du contenu
+* Apprendre à réaliser un lien hypertexte
+* Ajouter une image
+
+--- 
+
+# Travaux pratiques
+
+---
+
+## Créer un fichier HTML
+
+1. Créer un dossier `exercice_HTML`.
+1. Ouvrir un éditeur de texte ([_Visual Studio Code_](https://code.visualstudio.com), [_Atom_](https://atom.io), [Sublim Text](https://www.sublimetext.com)) sinon, TextEdit (sur Mac)/Bloc-Notes (sur PC)
+1. Créer un fichier `mapage` et l'enregistrer en format `.html`
+
+---
+![w:800](data/enregistrer_fichier.png)
+
+---
+* Si vous allez double-cliquer sur ce document, que se passe-t-il?
+* Regardez attentivement la zone de saisie des adresses, que remarquez-vous?
+
+---
+Pour la suite, on va conserver ce fichier ouvert dans le navigateur **et** l'ouvrir dans l'éditeur. 
+
+![w:800](data/double_affichage.png)
+
+---
+
+### Objectifs du jour: créer une page web
+
+* Créer un fichier HTML ✔︎
+* Créer un fichier HTML minimal
+* Découvrir quelques balises de structuration du contenu
+* Apprendre à réaliser un lien hypertexte
+* Ajouter une image
+
+--- 
+## Créer un fichier HTML minimal
+* Copiez le texte ci-dessous et collez-le dans l'éditeur: 
+
+```txt
+        Votre site web 
+
+        Voici votre première page web. Comme les fichiers sont enregistrés sur votre ordinateur et pas sur le serveur d'un hébergeur, elle n'est visible qu'en local, c'est-à-dire à partir de votre ordinateur. 
+        
+        Elle pourra contenir du texte, de l'image, du son, de la vidéo et un lien vers une autre page.
+
+        Page web réalisée le 29 mars 2021,
+        Université de Neuchâtel.
+```
+* Enregistrez le document. Actualisez le fichier sur le navigateur, que se passe-t-il?
+
+---
+
+* Un fichier HTML commence par une **balise** ```<html>``` et se termine par une balise ```</html>```
+    * Une balise donne des instructions à l'outil informatique pour lui dire comment interpréter les données.
+    * Généralement, une balise s'ouvre et se ferme. 
+    * Il existe des balises autofermantes, comme ```<br/>``` (saut de ligne): dans ce cas, le ```/```se trouve avant le chevron fermant. 
+---
+![w:800](data/anatomie.png)
+[Anatomie d'un élément](https://developer.mozilla.org/fr/docs/Learn/Getting_started_with_the_web/HTML_basics)
+
+---
+
+* Un fichier HTML fonctionne sur le principe de l'imbrication: les balises s'imbriquent les unes dans les autres, comme des poupées russes.
+    * `<html> <body> </html> </body>` n'est pas correct.
+    * `<html> <body> </body> </html>` est correct.
+
+---
+
+* La structure minimale d'un fichier ```.html``` est la suivante: 
+
+```HTML
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ma première page web</title>
+    </head>
+    <body>
+        Votre site web 
+
+        Voici votre première page web. Comme les fichiers sont enregistrés sur votre ordinateur et pas sur le serveur d'un hébergeur, elle n'est visible qu'en local, c'est-à-dire à partir de votre ordinateur. 
+        
+        Elle pourra contenir du texte, de l'image, du son, de la vidéo et un lien vers une autre page.
+
+        Page web réalisée le 29 mars 2021,
+        Université de Neuchâtel.
+    </body>
+</html>
+```
+* Dans votre document ```.html```, remplacez le texte précédent par celui-ci. Enregistrez et actualisez le fichier dans votre navigateur. Que remarquez-vous?
+
+--- 
+```HTML
+<!DOCTYPE html>
+````
+* Attention, il se trouve avant la balise HTML. 
+* Comme il ne s'agit pas à proprement parler d'une balise, le doctype ne doit pas être fermé.
+* Au départ, il servait à identifier le standard employé pour l'encodage. 
+* Indispensable pour signifier que votre site est encodé en `HTML 5`
+
+---
+
+```HTML
+    <head>
+        <meta charset="utf-8">
+        <title>Ma première page web</title>
+    </head>
+```
+* `<head>` contient un en-tête avec des éléments permettant la correcte interprétation du fichier `HTML` par l'ordinateur
+* Pas rendu graphiquement dans le navigateur
+* ```<title>``` donne le nom affiché de la page par le navigateur
+* ```<meta charset="utf-8">``` définit le jeu de caractères employé et permet d'afficher les caractères spéciaux. 
+
+---
+```HTML
+    <body>
+        Votre site web 
+
+        Voici votre première page web. Comme les fichiers sont enregistrés sur votre ordinateur et pas sur le serveur d'un hébergeur, elle n'est visible qu'en local, c'est-à-dire à partir de votre ordinateur. 
+        
+        Elle pourra contenir du texte, de l'image, du son, de la vidéo et un lien vers une autre page.
+
+        Page web réalisée le 29 mars 2021,
+        Université de Neuchâtel.
+    </body>
+```
+* La balise `<body>` renferme tout le contenu affiché de la page.
+* Pour structurer ce contenu, on va utiliser d'autres balises. 
+
+---
+### Objectifs du jour: créer une page web
+
+* Créer un fichier HTML ✔︎
+* Créer un fichier HTML minimal ✔︎
+* Découvrir quelques balises de structuration du contenu
+* Apprendre à réaliser un lien hypertexte
+* Ajouter une image
+
+---
+## Découvrir quelques balises de structuration du contenu
+
+* `<h1>, <h2>, <h3>, <h4>, <h5>, <h6>` permettent d'identifier différents niveaux de titre.
+* `<p>`permet d'identifier un paragraphe.
+
+Essayez d'appliquer ces balises à votre fichier `.html`. Enregistrez le fichier et actualisez votre page dans le navigateur. 
+
+> N'oubliez pas qu'il faut ouvrir la balise au début du contenu et la fermer à la fin!
+> Raccourci sur Visual Studio Code: sélectionner le texte, puis pressez `cmd + e`, dans la boîte de dialogue, entrez la balise sans les chevrons, `enter`
+
+--- 
+* `<ul>` permet d'introduire une liste non structurée (avec des puces)
+* `<ol>` permet d'introduire une liste structurée (numérotée)
+* Chaque élément de la liste doit être balisé avec `<li>`, peu importe la liste. 
+
+Ajoutez la liste à l'exercice. Enregistez, actualisez la page dans le navigateur.
+
+---
+### Indentation
+
+Comme on l'a vu, le navigateur n'interprète pas les retours à la ligne si ceux-ci ne sont pas balisés. 
+
+Pour rendre le fichier `.html` lisible par son auteur, il convient de l'indenter: 
+* en séparant les éléments par des retours à la ligne
+* en décalant vers la droite les éléments qui dépendent d'un niveau supérieur.
+
+---
+
+```HTML
+<body>
+    <h1>Votre site web </h1>
+        <p>Voici votre première page web. 
+        Comme les fichiers sont enregistrés sur votre ordinateur et pas sur le serveur d'un hébergeur, 
+        elle n'est visible qu'en local, c'est-à-dire à partir de votre ordinateur. 
+        </p>        
+        <p>Elle pourra contenir 
+            <ol>
+                <li>du texte, </li>
+                <li>de l'image,</li> 
+                <li>du son,</li> 
+                <li>de la vidéo</li> 
+                <li>et un lien vers une autre page.</li>
+            </ol>
+        </p>
+        <p>
+            Page web réalisée le 29 mars 2021,
+            Université de Neuchâtel.
+        </p>
+</body>
+````
+
+--- 
+### D'autres balises
+
+* `<br/>` permet de réaliser un saut de ligne au sein d'un paragraphe.
+* `<strong>` permet de signaler l'importance d'un passage.
+* `<em>` permet de de marquer l'emphase.
+
+Modifiez votre fichier `.html` pour introduire ces balises, au besoin, ajoutez du texte. Enregistrez le fichier et actualisez la page dans le navigateur. Comment ces éléments sont-ils rendus?
+
+--- 
+* Les balises que nous venons de voir sont **porteuses de sens**: l'ordinateur ne fait pas qu'appliquer un rendu graphique, il interprète le niveau de l'information.
+* Le rendu graphique des balises pourra être modifié par une feuille de style encodée en langage CSS.
+* `<strong>` ou `<em>` **_ne doivent donc pas_** être employés "pour mettre du gras" ou "pour mettre en italique", mais pour signaler une intention particulière.
+
+---
+* Il existe des balises qui ne sont pas sémantiques, mais dites **"de présentation"** et qui servent à rendre le gras, l'italique et le soulignement: `<b>, <i>` et `<u>`.
+    * `<b>`: des mots‑clés, des marques, une phrase importante...
+    * `<i>`: des mots étrangers, des termes techniques, une pensée...
+    * `<u>`: titre de livre, mauvaise orthographe...
+
+--- 
+### Objectifs du jour: créer une page web
+
+* Créer un fichier HTML ✔︎
+* Créer un fichier HTML minimal ✔︎
+* Découvrir quelques balises de structuration du contenu ✔︎
+* Réaliser un lien hypertexte
+* Ajouter une image
+
+--- 
+## Réaliser un lien hypertexte
+
+* La balise qui permet de réaliser un lien hypertexte est `<a>`.
+* Son contenu sera le texte souligné à cliquer. 
+
+Placez cette balise autour de "Université de Neuchâtel" dans votre fichier `.html`. Enregistrez et actualisez la page dans le navigateur. Que remarquez-vous?
+
+---
+* Pour que ce lien pointe vers un fichier, il faut lui attribuer un _url_ (_Uniform Resource Locator_), c'est-à-dire le chemin pour trouver cet élément, qu'il soit en ligne ou sur votre ordinateur.
+* Cette adresse va être placée dans un attribut `href` (_Hypertext REFerence_) qui prend place dans la balise `<a>` ouvrante:
+
+```HTML
+    <a href="https://www.unine.ch">Université de Neuchâtel</a>
+```
+
+Ajoutez l'attribut à votre page `.html`. Enregistrez et actualisez la page dans votre navigateur. Que remarquez-vous?
+
+--- 
+### Balise et attribut
+* Les attributs sont des éléments importants du code qui permettent de préciser le sémantisme d'une balise, ses propriétés, mais aussi son rendu graphique... 
+* Ajoutez l'attribut `title="Site de l'UNINE"` dans le lien hypertexte. 
+* Enregistrez et actualisez la page dans votre navigateur. Qu'observez-vous?
+
+---
+### De la page au site
+Nous allons maintenant créer un site en ajoutant une seconde page.
+1. Dans votre éditeur, vous créez un nouveau fichier `.html`: 
+    * vous le nommez `souspage.html`;
+    * vous enregistrez au même endroit que le premier.
+1. Dans ce fichier, vous créez une page minimale sur le modèle de celle que nous avons créée tout à l'heure (ou copier le modèle suivant).
+1. Dans la liste à puce du fichier `mapage.html`, vous transformez le dernier item en lien hypertext. Le chemin vers la sous-page est simplement `souspage.html`.
+1. Vous enregistrez et actualisez `mapage.html` dans votre navigateur. Qu'est-ce que vous observez?
+
+---
+`souspage.html` proposition de contenu: 
+```HTML
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ma seconde page web</title>
+    </head>
+    <body>
+        Voici donc une autre page.
+    </body>
+</html>
+```
+---
+### Objectifs du jour: créer une page web
+
+* Créer un fichier HTML ✔︎
+* Créer un fichier HTML minimal ✔︎
+* Découvrir quelques balises de structuration du contenu ✔︎
+* Réaliser un lien hypertexte ✔︎
+* Ajouter une image
+
+--- 
+## Ajouter une image
+
+* Pour insérer une image, on utilise la balise autofermante `<img/>`. 
+* L'attribut `src="..."` permet de pointer vers une image présente sur internet ou sur votre ordinateur. 
+    * Suivez [ce lien](https://cdn.pixabay.com/photo/2015/01/08/18/24/children-593313_960_720.jpg) pour télécharger une image que vous enregistrez dans le même dossier que vos fichiers `.html`.
+    * Renommez l'image avec un nom bref, par exemple `hourra.jpeg`.
+    * Dans votre sous-page, ajoutez deux fois la balise `<img src="..."/>`:
+        * Dans la première, faites en sorte de publier l'image à partir du web.
+        * Dans la seconde, faites en sorte de publier l'image à partir de vos fichiers. 
+* Enregistrez et actualisez votre page dans le navigateur. Qu'observez-vous? 
+
+---
+### Objectifs du jour: créer une page web
+
+* Créer un fichier HTML ✔︎
+* Créer un fichier HTML minimal ✔︎
+* Découvrir quelques balises de structuration du contenu ✔︎
+* Réaliser un lien hypertexte ✔︎
+* Ajouter une image ✔︎
+
+--- 
+## La prochaine fois
+* Gérer l'arborescence de fichiers.
+* Attributs supplémentaires. 
+* `<div>`, `<frame>`, `<span>`
+* Insérer un tableau.
+* Insérer du son. 
+* Créer un menu.
+* Mise en forme avec CSS.
+
+--- 
+# Exercice 
+
+Les exercices se trouvent dans le sous-dossier "exercices". Vous pouvez cliquer sur les liens pour y accéder directement.
+[Exercice 1](exercices/exercice1.md)
+[Exercice 2](exercices/exercice2.md)
+
+--- 
+### Gérer l'arborescence des fichiers
+
+Durant le cours, nous avons créé/enregistré/stocké
+* deux fichiers `.html`
+* un fichier `.jpeg`
+
+Tous ces fichiers sont stockés dans un seul dossier. On imagine ce que cela donne lorsque le site prend de l'ampleur: l'organisation des fichiers devient importante et nécessaire. On a donc recours à des sous-dossiers.
+
+---
+Par exemple: 
+```YAML
+DOSSIER
+    |-fichier1.html
+    |-fichier2.html
+    |-fichier3.html
+    |-fichier4.html
+|-style
+    |-fichier.css
+|-images
+    |-fichier1.jpg
+    |-fichier2.jpg
+```
+
+---
+
+Ou alors: 
+```YAML
+DOSSIER
+|-HTML
+    |-fichier1.html
+    |-fichier2.html
+    |-fichier3.html
+    |-fichier4.html
+|-style
+    |-fichier.css
+|-images
+    |-fichier1.jpg
+    |-fichier2.jpg
+```
+
+--- 
+
+Dans ce cas, il faudra modifier le chemin d'accès aux fichiers. Lorsqu'ils sont stockés sur votre ordinateur, les fichiers occupent tous une place relative les uns par rapport aux autres. 
+
+Il est donc possible de naviguer dans le répertoire en descendant ou remontant l'arborescence de vos fichiers. 
+
+>Attention, ces chemins restent **relatifs** cela signifie que si vous déplacez une image dans un dossier, vous devez également modifier le chemin qui y mène dans votre fichier HTML. 
+
+---
+
+Si le fichier `.html` et le fichier `.jpeg` se trouvent dans le même dossier, le chemin est le suivant: 
+```HTML
+<img src="hourra.jpeg">
+```
+![w:500](data/cheminsimple.png)
+
+---
+Si le fichier `.jpeg` se trouve dans un sous-dossier, le chemin est le suivant: 
+```HTML
+<img src="images/hourra.jpeg">
+```
+![w:500](data/chemindescendant.png)
+
+---
+Si les deux fichiers se trouvent dans des sous-dossier, le chemin est le suivant: 
+```HTML
+<img src="../images/hourra.jpeg">
+```
+![w:500](data/cheminascendant.png)
+
