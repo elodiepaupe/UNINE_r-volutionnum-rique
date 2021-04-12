@@ -1,0 +1,484 @@
+---
+marp: false
+---
+
+Université de Neuchâtel
+Master en littératures
+
+# TG: Histoire du livre et sa troisième révolution (numérique)
+## Cours 6: HTML (bases) et CSS (bases)
+
+Élodie Paupe 
+chaire de philologie classique et d'histoire ancienne
+
+12 mars 2021
+
+---
+### Objectifs du jour: 
+
+* Ajouter une image
+* Gérer l'arborescence de fichiers
+* Attributs supplémentaires
+* Balises supplémentaires
+* Mise en forme avec CSS
+
+--- 
+## Ajouter une image
+
+* Pour insérer une image, on utilise la balise autofermante `<img/>`. 
+* L'attribut `src="..."` permet de pointer vers une image présente sur internet ou sur votre ordinateur. 
+    * Suivez [ce lien](https://cdn.pixabay.com/photo/2015/01/08/18/24/children-593313_960_720.jpg) pour télécharger une image que vous enregistrez dans le même dossier que vos fichiers `.html`.
+    * Renommez l'image avec un nom bref, par exemple `hourra.jpeg`.
+    * Dans votre sous-page, ajoutez deux fois la balise `<img src="..."/>`:
+        * Dans la première, faites en sorte de publier l'image à partir du web.
+        * Dans la seconde, faites en sorte de publier l'image à partir de vos fichiers. 
+* Enregistrez et actualisez votre page dans le navigateur. Qu'observez-vous? 
+
+---
+### Objectifs du jour: 
+
+* Ajouter une image ✔︎
+* Gérer l'arborescence de fichiers
+* Attributs supplémentaires
+* Balises supplémentaires
+
+* Mise en forme avec CSS
+
+--- 
+## Gérer l'arborescence des fichiers
+
+Durant le cours de la semaine dernière, nous avons créé/enregistré/stocké
+* deux fichiers `.html`
+* un fichier `.jpeg`
+
+Tous ces fichiers sont stockés dans un seul dossier. On imagine ce que cela donne lorsque le site prend de l'ampleur: l'organisation des fichiers devient importante et nécessaire. On a donc recours à des sous-dossiers.
+
+---
+Par exemple: 
+```YAML
+DOSSIER
+    |-fichier1.html
+    |-fichier2.html
+    |-fichier3.html
+    |-fichier4.html
+|-style
+    |-fichier.css
+|-images
+    |-fichier1.jpg
+    |-fichier2.jpg
+```
+
+---
+
+Ou alors: 
+```YAML
+DOSSIER
+|-HTML
+    |-fichier1.html
+    |-fichier2.html
+    |-fichier3.html
+    |-fichier4.html
+|-style
+    |-fichier.css
+|-images
+    |-fichier1.jpg
+    |-fichier2.jpg
+```
+
+--- 
+
+Dans ce cas, il faudra modifier le chemin d'accès aux fichiers. Lorsqu'ils sont stockés sur votre ordinateur, les fichiers occupent tous une place relative les uns par rapport aux autres. 
+
+Il est donc possible de naviguer dans le répertoire en descendant ou remontant l'arborescence de vos fichiers. 
+
+>Attention, ces chemins restent **relatifs** cela signifie que si vous déplacez une image dans un dossier, vous devez également modifier le chemin qui y mène dans votre fichier HTML. 
+
+---
+
+Si le fichier `.html` et le fichier `.jpeg` se trouvent dans le même dossier, le chemin est le suivant: 
+```HTML
+<img src="hourra.jpeg">
+```
+![w:500](data/cheminsimple.png)
+
+---
+Si le fichier `.jpeg` se trouve dans un sous-dossier, le chemin est le suivant: 
+```HTML
+<img src="images/hourra.jpeg">
+```
+![w:500](data/chemindescendant.png)
+
+---
+Si les deux fichiers se trouvent dans des sous-dossier, le chemin est le suivant: 
+```HTML
+<img src="../images/hourra.jpeg">
+```
+![w:500](data/cheminascendant.png)
+
+---
+### Objectifs du jour: 
+
+* Ajouter une image ✔︎
+* Gérer l'arborescence de fichiers ✔︎
+* Attributs supplémentaires
+* Balises supplémentaires
+* Mise en forme avec CSS
+
+
+---
+## Attributs supplémentaires
+
+Vous connaissez déjà les attributs: 
+* `charset` pour introduire l'encodage dans l'en-tête
+* `href` pour introduire un URL
+* `title` pour nommer un élément lorsqu'on le survol avec la souris 
+* `src` pour lier une image
+
+---
+La balise `<img>` accepte d'autres balises qui permettent de préciser le comportement de l'illustration: 
+* `width` et `height` définissent la hauteur d'une illustration en pixel
+* `alt` définit le texte qui apparaît si une image ne peut pas s'afficher
+
+En application, ça donne quoi?
+
+---
+La balise `<html>` devrait toujours porter l'attribut `lang` qui déclare la langue de la page: elle permet que tout le document en hérite ensuite.
+
+La valeur que prend l'attribut `lang` est définie par une spécification de l'IETF (_Internet Engineering Task Force_) ([BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) - (_Best Current Practices_); RFC 5646 (_Request for Comments_)) qui définit notamment des étiquettes de langues simples: `en`, `fr`, etc
+
+
+---
+### Objectifs du jour: 
+
+* Ajouter une image ✔︎
+* Gérer l'arborescence de fichiers ✔︎
+* Attributs supplémentaires ✔︎
+* Balises supplémentaires
+* Mise en forme avec CSS
+
+---
+## Balises supplémentaires
+* `<header>` est l'élément qui contient un contenu introductif ou une série de liens pour la navigation, par exemple des titres, un logo, des informations sur l'auteur ou l'autorité responsable de la page.
+* `<footer>` est l'élément qui contient le pied de page d'un document ou d'une partie du document, notamment les informations relatives à au copyright, des moyens de contact, le plan du site, etc.
+
+---
+* `<nav>` est l'élément qui contient un menu de navigation. Il s'utilise en complément avec `<a>`. Les liens sont présentés dans une liste avec `<ul>`. 
+
+```html
+<nav id="primary_nav_wrap">
+    <ul>
+        <li class="current-menu-item"><a href="accueil.html">Accueil</a> </li>
+        <li><a href="exercice.html">Voyage en Italie</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+```
+
+En pratique, ça donne quoi?
+
+--- 
+
+* `<hr>` s'emploie sans balise fermante et annonce un changement de contenu dans la page. Sa réalisation graphique est une ligne horizontale (_horizontal rule_).
+* `<pre>` permet d'introduire du texte préformaté: il conservera ainsi les retours à la ligne, les tabulations, etc. Sa réalisation graphique se fait en police Courier. 
+* `<iframe>` crée un cadre dans la page qui peut contenir une autre page web. Cette balise peut supporter les mêmes attributs que `<img>`. 
+
+En application, ça donne quoi?
+
+
+---
+* `<b>`: texte en gras
+* `<strong>` : texte important
+* `<i>` : texte en italique
+* `<em>` : texte avec emphase
+* `<mark>` : texte marqué
+* `<small>` : texte plus petit
+* `<del>` : texte effacé
+* `<ins>` : texte inséré
+* `<sub>` : texte en indice
+* `<sup>` : texte en exposant
+
+---
+
+[Exercice 1](exercices/editiondiplomatique.md)
+
+---
+### Deux niveaux d'éléments
+* Éléments de niveau bloc: ils commencent à une nouvelle ligne, comme
+    * `<header>`
+    * `<h1>-<h6>`
+    * `<p>`
+    * `<pre>`
+    * `<hr>`
+    * `<ol>` et `<ul>`
+    * `<div>`: cette balise permet de diviser un document HTML. 
+* Éléments de niveau _inline_: ils ne commencent pas une nouvelle ligne. Les balises vues dans la diapositive précédentes en font partie. 
+
+---
+## Commenter son code
+Lorsqu'on code, on souhaite parfois laisser des informations dans le code qui ne seront pas visibles sur le navigateur internet. 
+
+Ces commentaires sont destinées aux personnes qui liront le code source, le développeur d'un site ou d'un livre numérique. Ils peuvent justifier certains choix d'encodage, signaler une information importante, indiquer la structure d'un document complexe, etc.
+
+Pour commenter le code `HTML`, on utilise la syntaxe suivante: 
+```html
+<!-- Voilà, ici, je place un commentaire. -->
+```
+
+---
+### Objectifs du jour: 
+
+* Ajouter une image ✔︎
+* Gérer l'arborescence de fichiers ✔︎
+* Attributs supplémentaires ✔︎
+* Balises supplémentaires ✔︎
+* Mise en forme avec CSS
+
+
+---
+## Mise en force avec CSS
+### Syntaxe de base
+Le langage CSS s'exprime de la façon suivante: 
+
+```CSS
+body {
+  background-color: lightblue;
+}
+```
+On sélectionne la balise HTML concernée, les informations de mise en forme sont données ensuite entre accolades: pour chaque propriété, une ou plusieurs valeurs sont données. 
+
+---
+
+![](data/css_syntaxe.gif)
+[Source](https://www.w3schools.com/css/css_syntax.asp)
+
+---
+On peut également sélectionner les éléments en fonction de l'attribut `class` qu'on a fait porter aux éléments HTML. 
+
+Ainsi, si on a le code HTML suivant: 
+```html
+<div class="poem">
+    <p>blablabla</p>
+</div>
+<div class="note">
+    <p>blablabla</p>
+</div>
+```
+
+---
+On pourra commander de façon différentes la mise en forme des deux sections dans le CSS en sélectionnant la `class`: 
+```CSS
+.poem {
+  text-align: center;
+  font-size: 12pt;
+}
+
+.note {
+  text-align: left;
+  font-size: 10pt;
+}
+```
+
+---
+On peut encore sélectionner: 
+* un élément porteur d'un attribut de `class` spécifique. Pour `<p class="red">`: `p.red`
+* tous les éléments: `*`
+* certaines éléments: `p, div`
+
+---
+On peut déclarer la mise en forme à différents endroits. 
+* Interne = à un seul endroit dans le document HTML
+* Externe = dans un autre fichier
+* _Inline_ = dans le code HTML
+
+La syntaxe qui vient d'être présentée est utilisée telle quelle dans le cas d'un document interne ou externe. Elle est raccourcie dans le cas d'un usage interne, comme nous allons le voir.
+
+---
+### Interne et la balise `<style>`
+La feuille de style encodée en CSS est placée au début du document dans le `<head>`. 
+
+Son contenu est placée dans la balise `<style>`: 
+```html
+<head>
+    <title>Voyage en Italie</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+        background-color: linen;
+        }
+
+        h1 {
+        color: maroon;
+        margin-left: 40px;
+        }
+    </style>
+</head>
+```
+
+---
+### Externe
+La feuille de style CSS n'est pas contenue dans le document HTML, mais dans un fichier à part qui peut donc être commun à plusieurs documents HTML. 
+
+On relie chaque fichier HTML à sa feuille de style CSS en ajoutant l'élément suivant dans la balise `<head>`: 
+```html
+<link rel="stylesheet" href="mystyle.css">
+```
+Où on remplace _mystyle.css_ par le nom de votre fichier, enregistré en .css.
+
+---
+### _Inline_ et l'attribut `style`
+Les informations de mise en forme sont placées directement dans la balise grâce à l'attribut `style`: 
+
+```html
+<body style="background-color: linen;">
+    <h1 style="color: maroon; margin-left: 40px;">Titre de niveau 1</h1>
+    <p>Un paragraphe</p>
+</body>
+```
+
+---
+### Quelques propriétés de couleurs
+* `background-color` pour définir la couleur d'arrière-plan
+* `color` pour définir la couleur du texte
+* `border-color` pour définir la couleur d'une bordure 
+
+---
+Appeler des couleurs en HTML:
+* à l'aide de [140 noms de couleurs](https://www.w3schools.com/colors/colors_names.asp)
+* à l'aide de valeurs 
+    * [RGB](https://www.w3schools.com/html/html_colors_rgb.asp): une valeur à trois composante qui mélange les trois couleurs à des degrés divers avec la syntaxe suivante rdb(x, x, x) où _x_ est un nombre entre 0 et 255
+    * [HEX](https://www.w3schools.com/html/html_colors_hex.asp): une valeur hexadécimale définit la couleur avec la syntaxe suivante #RRGGBB
+    * HSL, RGBA ou HSLA
+
+---
+
+[Exercices 2 et 3](exercices/exercice2.md)
+
+---
+
+* `background`
+    * `background-image` pour définir une image d'arrière-plan avec la syntaxe: `background-image: url("IMG_7300.JPG");`
+    * `background-repeat`, `background-attachment`, `background-position`
+* `border`
+    * `border-style` pour définir le type de bordure: `dotted, dashed, solid, double, groove, ridge, inset, outset, none, hidden`
+        * on peut préciser `border-top-style` ou `right`, `bottom`, `left`
+    * `border-width` pour définir l'épaisseur de la bordure avec des valeurs
+        * spécifiques: px, pt, cm, em, etc.
+        * pré-définies: `thin, medium, thick`
+    * `border-radius` pour arrondir les angles de la bordure (valeur en px ou en %)
+
+---
+**Police de caractère** 
+* En CSS, on considère 5 familles: 
+    * serif 
+    * sans-serif
+    * monospace 
+    * cursive
+    * fantaisy
+
+![](data/polices.gif)
+
+---
+![](data/polices_exemples.png)
+
+---
+Habituellement, on déclare également une ou deux polices "de secours" au cas où la première n'était pas lisible. On peut aussi déclarer une famille. 
+
+Les polices les plus courantes et donc les plus sûres sont: 
+* Arial (sans-serif)
+* Verdana (sans-serif)
+* Helvetica (sans-serif)
+* Tahoma (sans-serif)
+* Trebuchet MS (sans-serif)
+* Times New Roman (serif)
+* Georgia (serif)
+* Garamond (serif)
+* Courier New (monospace)
+* Brush Script MT (cursive)
+
+---
+* `font` permet d'agir sur la police de caractère.
+    * `font-family` pour définir la police
+    * `font-size` pour définir la taille de la police
+        * avec des valeurs absolues: par exemple la taille en px
+        * avec des valeurs relatives: par exemple la taille en em ou en pourcentages
+    * `font-style` pour définir l'italique avec les valeurs `normal`, `italic` ou `oblique`
+
+---
+
+[Exercice 4](exercices/exercice2.md)
+
+--- 
+### Objectifs du jour: 
+
+* Ajouter une image ✔︎
+* Gérer l'arborescence de fichiers ✔︎
+* Attributs supplémentaires ✔︎
+* Balises supplémentaires ✔︎
+* Mise en forme avec CSS ✔︎
+
+--- 
+L'exercice précédent a montré que, par défaut, un élément de niveau bloc (par exemple `<h1>`) prend toute la place à disposition, ce qui n'est pas très esthétique.
+
+On peut définir une largeur absolu ou relative avec la propriété `width`.
+* `width: 1000px` créera un élément conteneur d'une largeur fixe de 1000 px, ce qui peut poser problème pour consulter le site sur un écran de petite taille. 
+* `width-max: 1000px`créera un élément conteneur d'une largeur maximale de 1000 px. 
+
+Ces valeurs doivent être définies en fonction des appareils qui vont servir à consulter le document. 
+
+---
+Pour le moment, le contenu est encore collé à gauche. On va ajouter des marges au document pour qu'il soit centré sur l'écran. Pour cela, on fait appel à la propriété `margin`. La valeur s'exprime en longueur spécifique (px, pt, cm, em, etc.), en pourcentage ou se calcule automatiquement (`auto`). 
+* On peut viser spécifiquement certaines marges (`margin-top`, `margin-right`, `margin-bottom`, `margin-left`). 
+* On peut aussi travailler sur les marges globalement (`margin`).
+
+---
+
+[Exercice 5](exercices/exercice5.md)
+
+---
+
+* `text-align` pour définir l'alignement horizontal du texte avec les valeurs `center`, `left`, `right` ou `justified`
+* `vertical-align` pour définir la place d'un contenu dans un élément. La propriété peut prendre les valeurs `top`, `middle` ou `bottom`
+* `text-decoration` pour définir une ligne au-dessus (`overline`), un soulignement (`underline`), une ligne par-dessus (`line-through`) 
+    * il est possible de préciser la nature du trait (`dotted`, `wavy`, `dashed`)
+    * il est possible de préciser la couleur 
+
+On pourra ainsi avoir `style="text-decoration: darkslateblue dashed underline"`
+
+---    
+* `text-transform` pour contrôler la dimension majuscule (`uppercase`) ou minuscule (`lowercase`). `capitalize` ajoute une majuscule au début de chaque mot.
+* `text-indent` pour ajouter une indention à la première ligne du texte. La valeur est donnée en px.
+* `text-shadow` pour ajouter une ombre au texte. On joindra trois valeurs: deux valeurs chiffrées en px qui donnent l'ombre horizontale et vertiale + la couleur. Si on ajoute une troisième valeur numérique, on abtiendra une ombre plus diffuse.
+    * `text-shadow: darkslateblue 3px 3px 20px`
+
+--- 
+* `letter-spacing` pour augmenter/diminuer l'espace entre les lettres. La valeur est donnée en px (par exemple 5px ou -5px)
+* `word-spacing` pour augmenter/diminuer l'espace entre les mots. 
+
+---
+* `line-height` pour définir l'espace entre les lignes. Par défaut, la valeur est 1. 
+
+--- 
+
+[Exercice 6](exercices/exercice2.md)
+
+
+---
+Si des informations contradictoires sont données parce que les indications se multiplient, la priorité est fixée ainsi: 
+1. Inline
+1. Externe ou interne (la dernière information encodée dans le head)
+1. Aucune mise en forme et rendu HTML
+
+
+---
+### À voir la fois prochaine
+* Citations avec `<q>`, `<blockquote>` et `<cite>`
+* Insérer un tableau
+* Insérer du son ou de la vidéo
+* Insérer un bouton
+* Insérer un formulaire
+* Transformer un menu `<nav>` sous forme de menu graphique
+
+---
+
+[Exercice 7](exercices/exercice2.md)
+

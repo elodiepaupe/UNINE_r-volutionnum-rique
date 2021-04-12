@@ -1,0 +1,32 @@
+html{
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+
+/* Corps de texte */
+
+body{
+    background-color:#fafafa;
+    color:grey;
+}
+h1{
+    font-family: monospace;
+    border-style: dotted;
+    border-color: red;
+    border-radius: 5px;
+}
+
+pre{
+    font-family: cursive; 
+    background-color: inherit;
+}
+
+p{
+    font-family: monospace;
+}
+
+a, .title{
+    color:grey;
+}
