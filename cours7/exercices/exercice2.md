@@ -21,7 +21,7 @@
 
 ## Exercice 5
 
-1. Reprenez le corrigé de la [feuille de style de l'exercice 4](exercice4_corrigé.html).
+1. Reprenez le corrigé de la [feuille de style de l'exercice 4](exercice4_corrigé.css).
 1. Utilisez la propriété `max-width` pour définir la largeur maximale de votre page à 1000px. 
 1. Utilisez la propriété `margin` pour centrer la page sur l'écran.
 1. N'oubliez pas de vérifier que le fichier mentionner dans la balise `<link>` est toujours le bon. 
