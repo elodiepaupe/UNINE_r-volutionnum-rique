@@ -1,0 +1,31 @@
+html{
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+
+/* Corps de texte */
+
+body{
+    background-color:#fafafa;
+    color:grey;
+}
+h1{
+    font-family: monospace;
+	text-shadow: darkslateblue 3px 3px 20px;
+	letter-spacing: 3px;
+}
+
+pre{
+    font-family: cursive; 
+    background-color: inherit;
+}
+
+p{
+    font-family: monospace;
+}
+
+a, .title{
+    color:grey;
+}
