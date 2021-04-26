@@ -1,0 +1,53 @@
+html{
+    max-width:800px;
+    margin:auto;
+}
+
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+}
+
+h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: x-large;
+}
+
+h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: grey;
+    font-size: large;
+}
+
+body{
+    background-color: lavender;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+figure{
+    background-color: inherit; 
+    font-family:cursive;
+    font-size: small;
+    margin-left:50%;
+}
+
+figcaption{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    font-size: x-small;
+    margin-left:36px;
+}
+
+div.article{
+    font-size: medium;
+    line-height: 30px;
+}
+
+div.note{
+    font-size: small;
+
+}
+
+a.note{
+    vertical-align: super;
+    font-size:x-small;
+}

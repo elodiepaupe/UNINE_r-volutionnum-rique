@@ -1,0 +1,495 @@
+---
+marp: false
+---
+
+Université de Neuchâtel
+Master en littératures
+
+# TG: Histoire du livre et sa troisième révolution (numérique)
+## Cours 8: CSS (bases)
+
+Élodie Paupe 
+chaire de philologie classique et d'histoire ancienne
+
+26 avril 2021
+
+---
+### Objectifs du jour
+* Citations avec `<blockquote>`, `<q>` et `<cite>`
+* Insérer un renvoi (notes de bas de page)
+* Insérer un tableau (éditions parallèles)
+* `<span>` (théâtre)
+
+--- 
+## Citer un texte
+Lorsqu'on cite un texte, on identifie la source d'une information et/ou on rapporte un extrait du propos. 
+
+---
+### Citer avec `<blockquote>`
+La balise `<blockquote>` permet d'identifier une citation longue (_bloc de citation_). 
+Sans feuille de style associée, le texte est indenté. 
+
+```HTML
+<p>
+    Dès les premières lignes de la <i>Recherche</i>, le lecteur fait connaissance avec un narrateur homodiégétique et intradiégétique: 
+    <blockquote>
+        <p>
+            Longtemps, je me suis couché de bonne heure. 
+            Parfois, à peine ma bougie éteinte, mes yeux se fermaient si vite que je n’avais pas le temps de me dire : 
+            « Je m’endors. »
+        </p>
+    </blockquote>
+</p>
+```
+
+---
+La balise `<blockquote>` supporte l'attribut `cite` qui permet d'intégrer immédiatement la source de la citation dans le code, mais cette information n'est pas affichée par le navigateur. 
+
+
+```HTML
+<p>
+    Dès les premières lignes de la <i>Recherche</i>, le lecteur fait connaissance avec un narrateur homodiégétique et intradiégétique: 
+    <blockquote cite="https://fr.wikisource.org/wiki/Du_c%C3%B4t%C3%A9_de_chez_Swann/Partie_1">
+        <p>
+            Longtemps, je me suis couché de bonne heure. 
+            Parfois, à peine ma bougie éteinte, mes yeux se fermaient si vite que je n’avais pas le temps de me dire : 
+            « Je m’endors. »
+        </p>
+    </blockquote>
+</p>
+```
+--- 
+La balise `<cite>` peut être employée pour identifier la source, en particulier le titre d'un livre, d'un poème, d'un article, d'une chanson, etc. Sa réalisation graphique est un italique. 
+
+```HTML
+<p>
+    Dès les premières lignes de la <i>Recherche</i>, le lecteur fait connaissance avec un narrateur homodiégétique et intradiégétique: 
+    <blockquote>
+        <p>
+            Longtemps, je me suis couché de bonne heure. 
+            Parfois, à peine ma bougie éteinte, mes yeux se fermaient si vite que je n’avais pas le temps de me dire : 
+            « Je m’endors. »
+        </p>
+    </blockquote>
+    Marcel Proust, <cite>Du côté de chez Swann</cite>, 1913.
+</p>
+```
+--- 
+
+Si on veut associer un lien hypertexte à la balise `<cite>`, on doit ajouter une balise `<a>`. 
+
+```HTML
+<p>
+    Dès les premières lignes de la <i>Recherche</i>, le lecteur fait connaissance avec un narrateur homodiégétique et intradiégétique: 
+    <blockquote>
+        <p>
+            Longtemps, je me suis couché de bonne heure. 
+            Parfois, à peine ma bougie éteinte, mes yeux se fermaient si vite que je n’avais pas le temps de me dire : 
+            « Je m’endors. »
+        </p>
+    </blockquote>
+    Marcel Proust, <a href="https://fr.wikisource.org/wiki/Du_c%C3%B4t%C3%A9_de_chez_Swann/Partie_1" title="Lire le début du roman."><cite>Du côté de chez Swann</cite></a>, 1913.
+</p>
+```
+---
+La balise `<a>` peut englober n'importe quel élément, y compris une image: 
+
+```HTML 
+<a href="https://fr.wikisource.org/wiki/Du_c%C3%B4t%C3%A9_de_chez_Swann/Partie_1>">
+    <img src="">
+</a>
+````
+
+---
+Si on souhaite identifier l'entier de la citation (texte cité + référence), on peut utiliser la balise `<figure>` dont on a déjà vu l'utilisation avec les illustrations. Employée avec la balise `<figcaption>`, elle permet de lier image et légende: 
+
+```HTML 
+<figure>
+    <img src="data/padding.png" width="300px">
+    <figcaption>Cette image contient une légende.</figcaption>
+</figure>
+```
+
+De même, elle permet de lier texte et référence: 
+```HTML 
+<figure>
+    <blockquote>
+        <p>
+            Longtemps, je me suis couché de bonne heure. 
+            Parfois, à peine ma bougie éteinte, mes yeux se fermaient si vite que je n’avais pas le temps de me dire : 
+            « Je m’endors. »
+        </p>
+    </blockquote>
+    <figcaption>Marcel Proust, 
+        <a href="https://fr.wikisource.org/wiki/Du_c%C3%B4t%C3%A9_de_chez_Swann/Partie_1" title="Lire le début du roman."><cite>Du côté de chez Swann</cite></a>
+        , 1913.
+    </figcaption>
+</figure>
+```
+
+---
+En procédant ainsi, on identifie tout le bloc, ce qui permet d'appliquer une mise en page particulière non seulement au texte cité, mais égalememnt à sa référence. 
+
+```CSS
+figure{
+    background-color:#fafa; 
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding: 12px;
+}
+
+figcaption{
+    font-family: cursive; 
+    margin-left:48px;
+}
+```
+---
+### Citer avec `<q>`
+La balise `<blockquote>` crée un élément de niveau bloc, mais il est possible d'identifier une citation de niveau _inline_ avec la balise `<q>` qui placera des guillemets de part et d'autre de la citation. 
+
+```HTML
+<p>
+     Dès les premières lignes de la <i>Recherche</i>, le lecteur fait connaissance avec un narrateur homodiégétique et intradiégétique:
+    <figure>
+        <blockquote>
+            <p>
+                Longtemps, je me suis couché de bonne heure. 
+                Parfois, à peine ma bougie éteinte, mes yeux se fermaient si vite que je n’avais pas le temps de me dire : 
+                « Je m’endors. »
+            </p>
+        </blockquote>
+        <figcaption>Marcel Proust, 
+            <a href="https://fr.wikisource.org/wiki/Du_c%C3%B4t%C3%A9_de_chez_Swann/Partie_1" title="Lire le début du roman."><cite>Du côté de chez Swann</cite></a>
+            , 1913.
+        </figcaption>
+    </figure>
+    Ce <q>je</q> va accompagner le lecteur tout au long de la <i>Recherche</i>.
+</p>
+```
+
+---
+### Objectifs du jour
+* Citations avec `<blockquote>`, `<q>` et `<cite>` ✔︎
+* Insérer un renvoi (notes de bas de page)
+* Insérer un tableau (éditions parallèles)
+* `<span>` (théâtre)
+
+
+---
+## Insérer un renvoi
+On voudra peut-être renvoyer vers une bibliographie ou des notes qui se trouveraient sur une autre page ou en bas de page. Dans ce dernier cas, il va falloir utiliser un lien hypertexte qui ne revoie pas vers une autre page, mais qui pointe vers une partie spécifique du document qu'on appelle une ancre.
+
+Une ancre est un élément du fichier HTML identifié à l'aide de l'attribut `id`.
+
+L'exemple suivant permet de renvoyer de l'article à la note de bas de page: 
+```HTML
+<div class="article">
+    Bla bla bla <a class="note" href="#proust">1</a>, bla bla bla.
+</div>
+
+<div class="bibliographie">
+    <p id="proust">
+        1 Marcel Proust,
+         <a href="https://fr.wikisource.org/wiki/Du_c%C3%B4t%C3%A9_de_chez_Swann/Partie_1" title="Lire le début du roman."><cite>Du côté de chez Swann</cite></a>
+         , 1913.
+    </p>
+</div>
+```
+
+---
+Pour permettre de revenir au texte, il faut créer l'ancre inverse: 
+
+```HTML
+<div class="article">
+    Bla bla bla <a class="note" href="#proust" id="note1">1</a>, bla bla bla.
+</div>
+
+<div class="bibliographie">
+    <p id="proust">
+        <a class="note" href="#note1">1</a> Marcel Proust, 
+        <a href="https://fr.wikisource.org/wiki/Du_c%C3%B4t%C3%A9_de_chez_Swann/Partie_1" title="Lire le début du roman."><cite>Du côté de chez Swann</cite></a>
+        , 1913.
+    </p>
+</div>
+```
+
+--- 
+Pour que les appels de note soient en exposant, on va manipuler le CSS: 
+
+```CSS
+a.note{
+    font-size: xx-small;
+    vertical-align: super;
+}
+```
+
+---
+Vous êtes maintenant capable de faire apparaître des notes: 
+* En bas de page: `<a href="">` + `id`
+* Sur une autre page qui s'ouvre complètement dans votre navigateur: `<a href="">` + une autre page `.html`
+* Sur une autre page qui s'ouvre dans un cadre sur la même page web: `<iframe>` + une autre page `.html` 
+* Dans une bulle au moment où la souris passe sur l'appel de note: `<a href="#">` + `title`
+
+---
+
+[Exercice 1](exercices/exercice1.md)
+
+--- 
+## Insérer un tableau
+Si on envisage de faire une édition bilingue ou qui présenterait le texte de plusieurs manuscrits, le recours à un tableau permet de régler bien des problèmes de mise en page: 
+* on dispose les paragraphes de façon à ce qu'ils se fassent face dans des cellules. 
+* on pourrait ajouter une colonne avec la numérotation des paragraphes pour permettre le renvoi à un paragraphe directement. 
+* on pourrait imaginer une colonne dédiée aux notes ou au commentaire du texte.
+
+--- 
+### `<table>`, `<tr>` et `<td>`
+* `<table>` définit l'élément tableau. 
+* Chaque nouvelle ligne est créée grâce à la balise `<tr>` (_table row_)
+* Dans chaque ligne, on décrit chaque cellule avec la balise `<td>` (_table data_)
+* Si une cellule contient un entête, on utilise la balise `<th>`(_table head_)
+
+```HTML
+<table>
+    <tr>
+        <th>Texte latin</th>
+        <th>Texte français</th>
+    </tr>
+    <tr>
+        <td>Arma virumque cano</td>
+        <td>Je chante les armes et l'homme</td>
+    </tr>
+</table>
+```
+---
+Le CSS permet de régler l'apparence du tableau. Si on veut des bordures, on utilise
+
+```CSS
+table, th, td {
+    border: 1px solid black;
+    }
+```
+Que remarque-t-on? 
+
+--- 
+Pour éviter ce problème, on ajoute 
+```CSS
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    }
+```
+
+--- 
+Pour éviter que le texte ne colle aux bordures, on utilise la propriété `padding` 
+```CSS
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+    }
+```
+
+--- 
+On peut fusionner des cellules horizontalement avec l'attribut `colspan` dont la valeur mentionne le nombre de cellules fusionnées: 
+
+```HTML
+<table>
+    <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Téléphone privé</th>
+        <th>Téléphone portable</th>
+    </tr>
+    <tr>
+        <td>Dupond</td>
+        <td>Charles</td>
+        <td>032 123 45 67</td>
+        <td>079 987 65 43</td>
+    </tr>
+    <tr>
+        <td>Dupond</td>
+        <td>Charlotte</td>
+        <td colspan="2">079 192 38 47</td>
+    </tr>
+</table>
+```
+
+---
+Dans l'autre sens, on peut fusionner des cellules verticalement avec l'attribut `rowspan`: 
+```HTML
+<table>
+    <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Téléphone</th>
+    </tr>
+    <tr>
+        <td rowspan="2">Dupond</td>
+        <td rowspan="2">Charles</td>
+        <td>032 123 45 67</td>
+    </tr>
+    <tr>
+        <td>079 987 65 43</td>
+    </tr>
+    <tr>
+        <td>Dupond</td>
+        <td>Charlotte</td>
+        <td >079 192 38 47</td>
+    </tr>
+</table>
+```
+
+---
+Pour ajouter un titre au tableau, on utilise la balise `<caption>` dans l'élément `<table>`: 
+```HTML
+<table>
+    <caption>Liste de présences</caption>
+    <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Téléphone</th>
+    </tr>
+    <tr>
+        <td rowspan="2">Dupond</td>
+        <td rowspan="2">Charles</td>
+        <td>032 123 45 67</td>
+    </tr>
+    <tr>
+        <td>079 987 65 43</td>
+    </tr>
+    <tr>
+        <td>Dupond</td>
+        <td>Charlotte</td>
+        <td >079 192 38 47</td>
+    </tr>
+</table>
+```
+
+--- 
+On peut définir la largeur des colonnes de façon absolue ou relative avec la propriété `width`: 
+```HTML
+<table style="width:75%">
+    <tr>
+        <th style="width:6%">Vers</th>
+        <th style="width:47%">Texte latin</th>
+        <th style="width:47%">Texte français</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Arma virumque cano Trojae qui primus ab oris</td>
+        <td>Je chante les armes et l'homme qui le premier des rivages de Troie</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Italiam fato profugus Laviniaque venit (litora)</td>
+        <td>Poussé par le destin est venu en Italie et sur les rivages de Lavinium.</td>
+    </tr>
+</table>
+```
+
+--- 
+
+[Exercice 2](exercices/exercice2.md)
+
+--- 
+## Mise en forme d'une pièce de théâtre
+Si on veut mettre en forme une pièce de théâtre, on doit identifier des morceaux de texte (prise de parole, différentes didascalies, etc.) pour en assurer la mise en forme. 
+
+On utilise la balise `<span>` pour identifier n'importe quelle chaîne de caractère. L'attribut `class` permet ensuite d'identifier d'identifier les passages précis pour la mise en forme. 
+
+```HTML 
+<p>
+    <span class="speaker">Arlequin.</span>
+    Hélas ! monsieur, mon très honoré maître, je vous en conjure…
+</p>
+
+<p>
+    <span class="speaker">Dorante.</span>
+    Encore !
+</p>
+
+<p>
+    <span class="speaker">Arlequin.</span>
+    Ayez compassion de ma bonne aventure ; ne portez point guignon à mon bonheur qui va son train si rondement ; ne lui fermez point le passage.
+</p>
+```
+
+---
+
+```HTML 
+<p>
+    <span class="speaker">Arlequin.</span>
+    Hélas ! monsieur, mon très honoré maître, je vous en conjure…
+</p>
+
+<p>
+    <span class="speaker">Dorante.</span>
+    Encore !
+</p>
+
+<p>
+    <span class="speaker">Arlequin.</span>
+    Ayez compassion de ma bonne aventure ; ne portez point guignon à mon bonheur qui va son train si rondement ; ne lui fermez point le passage.
+</p>
+```
+
+```CSS
+span.speaker{
+    display: block;
+    font-weight:bold; 
+    text-align: center;
+    padding-top: 5px;
+}
+```
+
+--- 
+
+[Exercice 3](exercices/exercice3.md)
+
+---
+## _DIJU_
+Ce qui est attendu: 
+* une "page d'accueil" qui permet de pointer vers chacune des notices
+* une notice par fichier html
+* une feuille de style commune 
+* une photographie avec légende et copyright
+* des renvois vers les notes de bas de page
+Vous devez adopter le ton impersonnel du _DIJU_ et éviter de modaliser votre discours. 
+
+[Exemple de notice en .html](data/notice_encodée.html)
+
+[Directives pour la mise en page](https://www.diju.ch/uploads/pdf/directives_redaction.pdf)
+
+--- 
+Si vous devez envoyer un questionnaire à la personne dont vous faites la notice, respectez scrupuleusement les étapes suivantes: 
+1. Prenez contact avec la personne pour lui annoncer qu'elle va faire l'objet d'une notice pour le _Dictionnaire du Jura_ en ligne. Présentez-vous et demandez l'autorisation d'envoyer un questionnaire. 
+1. Quand la personne a donné son accord, vous pouvez envoyer un questionnaire adapté des directives de mises en page comme celui-ci, en l'adaptant au besoin: 
+
+--- 
+```txt
+QUESTIONNAIRE
+Informations pour le dictionnaire du Jura sur internet : www.diju.ch
+Nom : 
+Prénom(s) : 
+Date de naissance :
+Lieu de naissance :
+Lieu d’origine/droit de cité :
+Père (prénoms, noms, profession) :
+Mère (prénoms, noms – nom de jeune fille, profession) :
+Epoux/-se (prénoms, noms – nom de jeune fille/célibataire, profession) :
+Enfants :
+Religion :
+Grades militaires (s’il y a lieu)/ parcours dans le service civil/protection civile :
+Formation (précisez le lieu de formation et si plusieurs formations successives prière de les préciser toutes, par exemple brevet d’instituteur bernois 1955-1957, puis Université de Neuchâtel 1960-1963, etc. ), nous vous prions de préciser les dates :
+Profession (principales activités, faits marquants, séjours à l’étranger, par exemple : médecin hospitalier au Maroc 1947-1950, puis ouvre son cabinet en 1951 à Delémont):
+Engagement dans les milieux économiques (conseils d’administration, etc.) :
+Associations et sociétés (culture, sport, etc.) :
+Activités politiques (indiquez la date d’adhésion à un parti, les premières fonctions occupées dans le parti avec les dates, par exemple membre du comité des jeunesses radicales bernoises (1923-27), puis les principaux postes politiques) :
+Engagement dans la Question jurassienne (s'il y a lieu):
+
+Si vous avez été élu dans un contexte particulier, n’hésitez pas à le préciser (par ex.: premier radical élu maire de la commune), indiquez aussi le nom de votre prédécesseur aux fonctions importantes (succède à X à la mairie de Z…), ainsi que des particularités de votre parcours politique (par ex.: candidat malheureux à tel poste)
+Si dans votre profession ou au cours d’un de vos mandats, vous avez contribué à un changement important dans un dossier, prière de le préciser : (p. ex: c’est sous son mandat de maire que l’école XYZ (20XX) et le centre sportif Z (20XX) ont été construit. Il a initié le projet de zone industrielle Y (20XX)) :
+Enfin, vous pouvez indiquer des particularités de votre parcours de vie ou parcours professionnel, des honneurs particuliers (distinctions, ordres, prix, etc.). Idem si vous jouez ou avez joué un rôle particulier dans une grande association (culturelle, professionnelle, etc.). De même, si un de vos parents a joué un rôle quelconque dans la vie politique, économique, sociale, culturelle du Jura, prière de le préciser. Idem, si vous avez joué un rôle dans les associations qui ont contribué à la création du canton du Jura, vous pouvez le noter (avec dates d’adhésion et dates des principales fonctions):
+
+Une photo numérique, avec copyright le cas échéant.
+```
+
