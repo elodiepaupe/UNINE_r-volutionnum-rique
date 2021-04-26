@@ -1,7 +1,3 @@
----
-marp: false
----
-
 Université de Neuchâtel
 Master en littératures
 
