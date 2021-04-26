@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8">
         <title>Démonstration</title>
@@ -8,12 +8,146 @@
                 max-width: 1000px;
             }
 
-            
+            figure{
+                background-color:#fafa;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                padding: 12px;
+            }
+            figcaption{
+                font-family: cursive;
+                margin-left:60px;
+            }
+
+            a.note{
+                font-size: xx-small;
+                vertical-align: super;
+            }
+
+            table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding:6px;
+    }
         </style>
     </head>
 
     <body>
-        
+        <div class="article">
+            Bla bla bla <a class="note" href="#proust" id="note1">1</a>, bla bla bla.
+        </div>
+        <p>
+            Dès les premières lignes de la <i>Recherche</i>, le lecteur fait connaissance avec un narrateur homodiégétique et intradiégétique: <blockquote>
+                    <p>
+                        Longtemps, je me suis couché de bonne heure.
+                        Parfois, à peine ma bougie éteinte, mes yeux se fermaient si vite que je n’avais pas le temps de me dire :
+                        « Je m’endors. »
+                    </p>
+                </blockquote>
+            </p>
 
+            <p>
+                Dès les premières lignes de la <i>Recherche</i>, le lecteur fait connaissance avec un narrateur homodiégétique et intradiégétique: <blockquote cite="https://fr.wikisource.org/wiki/Du_c%C3%B4t%C3%A9_de_chez_Swann/Partie_1">
+                        <p>
+                            Longtemps, je me suis couché de bonne heure.
+                            Parfois, à peine ma bougie éteinte, mes yeux se fermaient si vite que je n’avais pas le temps de me dire :
+                            « Je m’endors. »
+                        </p>
+                    </blockquote>
+                </p>
+
+                <p>
+                    Dès les premières lignes de la <i>Recherche</i>, le lecteur fait connaissance avec un narrateur homodiégétique et intradiégétique:
+                    <blockquote>
+                        <p>
+                            Longtemps, je me suis couché de bonne heure.
+                            Parfois, à peine ma bougie éteinte, mes yeux se fermaient si vite que je n’avais pas le temps de me dire :
+                            « Je m’endors. »
+                        </p>
+                    </blockquote>
+                    Marcel Proust, <cite>Du côté de chez Swann</cite>, 1913.
+                </p>
+
+                <p>
+                    Dès les premières lignes de la <i>Recherche</i>, le lecteur fait connaissance avec un narrateur homodiégétique et intradiégétique:
+                    <blockquote>
+                        <p>
+                            Longtemps, je me suis couché de bonne heure.
+                            Parfois, à peine ma bougie éteinte, mes yeux se fermaient si vite que je n’avais pas le temps de me dire :
+                            « Je m’endors. »
+                        </p>
+                    </blockquote>
+                    Marcel Proust, <a href="https://fr.wikisource.org/wiki/Du_c%C3%B4t%C3%A9_de_chez_Swann/Partie_1" title="Lire le début du roman."><cite>Du côté de chez Swann</cite></a>, 1913.
+                </p>
+
+                <figure>
+                    <img src="data/padding.png" width="300px">
+                    <figcaption>Cette image contient une légende.</figcaption>
+                </figure>
+
+                <figure>
+                    <blockquote>
+                <p>
+                Longtemps, je me suis couché de bonne heure.
+                Parfois, à peine ma bougie éteinte, mes yeux se fermaient si vite que je n’avais pas le temps de me dire : « Je m’endors. »
+                        </p>
+                    </blockquote>
+                <figcaption>Marcel Proust,
+                <a href="https://fr.wikisource.org/wiki/Du_c%C3%B4t%C3%A9_de_chez_Swann/Partie_1" title="Lire le début du roman."><cite>Du côté de chez Swann</cite></a> , 1913.
+                    </figcaption>
+                </figure>
+
+                <p>
+                    Dès les premières lignes de la <i>Recherche</i>, le lecteur fait connaissance avec un narrateur homodiégétique et intradiégétique:
+                        <figure>
+                            <blockquote>
+                                <p>
+                                    Longtemps, je me suis couché de bonne heure.
+                                    Parfois, à peine ma bougie éteinte, mes yeux se fermaient si vite que je n’avais pas le temps de me dire :
+                                    « Je m’endors. »
+                                </p>
+                            </blockquote>
+                    <figcaption>Marcel Proust,
+                    <a href="https://fr.wikisource.org/wiki/Du_c%C3%B4t%C3%A9_de_chez_Swann/Partie_1" title="Lire le début du roman."><cite>Du côté de chez Swann</cite></a> , 1913.
+                            </figcaption>
+                        </figure>
+                        Ce <q>je</q> va accompagner le lecteur tout au long de la <i>Recherche</i>.
+                    </p>
+
+                    
+        <div class="bibliographie">
+            <p id="proust">
+                <a class="note" href="#note1">1</a> Marcel Proust,
+                    <a href="https://fr.wikisource.org/wiki/Du_c%C3%B4t%C3%A9_de_chez_Swann/Partie_1" title="Lire le début du roman."><cite>Du côté de chez Swann</cite></a> , 1913.
+            </p> 
+        </div>
+
+        <table> 
+            <tr>
+                <th>Text latin</th>
+                <th>Texte français</th>
+            </tr>
+            <tr>
+                <td>Arma virumque cano</td>
+                <td>Je chante les armes et l'homme</td>
+            </tr>
+        </table>
+
+<hr>
+
+        <table style="width:75%">
+            <tr>
+                <th style="width:6%">Vers</th>
+                <th style="width:47%">Texte latin</th>
+                <th style="width:47%">Texte français</th>
+        </tr> <tr>
+                <td>1</td>
+                <td>Arma virumque cano Trojae qui primus ab oris</td>
+                <td>Je chante les armes et l'homme qui le premier des rivages de Troie</td>
+        </tr> <tr>
+                <td>2</td>
+                <td>Italiam fato profugus Laviniaque venit (litora)</td>
+                <td>Poussé par le destin est venu en Italie et sur les rivages de Lavinium.</td>
+            </tr>
+        </table>
     </body>
 </html>
