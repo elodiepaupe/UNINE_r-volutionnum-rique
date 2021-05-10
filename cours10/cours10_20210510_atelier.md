@@ -1,7 +1,3 @@
----
-marp: true
----
-
 Université de Neuchâtel
 Master en littératures
 
@@ -12,14 +8,6 @@ Master en littératures
 chaire de philologie classique et d'histoire ancienne
 
 10 mai 2021
-
----
-### Objectifs du cours 
-
-* créer un document de la classe "book" 
-* différence avec la classe "article"
-* structurer avec la classe "book"
-* insérer une image
 
 ---
 
