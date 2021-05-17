@@ -1,0 +1,304 @@
+\documentclass[12pt,a4paper,french]{book}
+\usepackage{xunicode}
+\usepackage{polyglossia}
+	 \setmainlanguage[variant=swiss,frenchpart=false]{french}
+    		\setotherlanguage{english}
+
+\usepackage{setspace}
+	%\singlespacing
+	\onehalfspacing
+	%\doublespacing
+
+\usepackage{reledmac}
+\usepackage{reledpar}
+    
+\usepackage{hyperref}
+
+\usepackage{csquotes}
+
+\newcommand\titre[1]{\textit{#1}}
+\newcommand\siecle[2]{\textsc{#1}\textsuperscript{#2}}
+
+\begin{document}
+\author{Jane Austen\\ édité par Élodie Paupe}
+\title{Pride and Prejudice}
+\date{1817}
+
+\maketitle
+
+\frontmatter
+
+\chapter{Introduction}
+
+\titre{Orgueil et Préjugés} (\titre{Pride and Prejudice}) est un roman de la femme de lettres anglaise Jane Austen paru en 1813. Il est considéré comme l'une de ses œuvres les plus significatives et est aussi la plus connue du grand public.
+
+Rédigé entre 1796 et 1797, le texte, alors dans sa première version (\titre{First Impressions}), figurait au nombre des grands favoris des lectures en famille que l'on faisait le soir à la veillée dans la famille Austen. Révisé en 1811, il est finalement édité deux ans plus tard, en janvier 1813. Son succès en librairie est immédiat, mais bien que la première édition en soit rapidement épuisée, Jane Austen n'en tire aucune notoriété: le roman est en effet publié sans mention de son nom (\enquote{par l'auteur de Sense and Sensibility}) car sa condition de \enquote{femme de la bonne société} lui interdit de revendiquer le statut d'écrivain à part entière\footnote{Le contenu de l'introduction est tiré de la notice \href{https://fr.wikipedia.org/wiki/Orgueil_et_Préjugés}{Wikipedia}}.
+
+Drôle et romanesque, le chef-d'œuvre de Jane Austen continue à jouir d'une popularité considérable, par ses personnages bien campés, son intrigue soigneusement construite et prenante, ses rebondissements nombreux, et son humour plein d'imprévu. Derrière les aventures sentimentales des cinq filles Bennet, Jane Austen dépeint fidèlement les rigidités de la société anglaise au tournant des \siecle{xviii}{e} et \siecle{xix}{e} siècles. À travers le comportement et les réflexions d'Elizabeth Bennet, son personnage principal, elle soulève les problèmes auxquels sont confrontées les femmes de la petite gentry campagnarde pour s'assurer sécurité économique et statut social. À cette époque et dans ce milieu, la solution passe en effet presque obligatoirement par le mariage : cela explique que les deux thèmes majeurs d'\titre{Orgueil et Préjugés} soient l'argent et le mariage, lesquels servent de base au développement des thèmes secondaires.
+
+Grand classique de la littérature anglaise, \titre{Orgueil et Préjugés} est à l'origine du plus grand nombre d'adaptations fondées sur une œuvre austenienne, tant au cinéma qu'à la télévision. Depuis \titre{Orgueil et Préjugés} de Robert Z. Leonard en 1940, il a inspiré quantité d'œuvres ultérieures: des romans, des films, et même une bande dessinée parue chez Marvel.
+
+Dans son essai de 1954, \titre{Ten Novels and Their Authors}, Somerset Maugham le cite en seconde position parmi les dix romans qu'il considére comme les plus grands. En 2013, Le \titre{Nouvel Observateur}, dans un hors-série consacré à la littérature des \siecle{xix}{e} et \siecle{xx}{e} siècle, le cite parmi les seize titres retenus pour le \siecle{xix}{e} siècle, le considérant comme \enquote{peut-être le premier chef-d'œuvre de la littérature au féminin}\footnote{\enquote{Les chefs-d'œuvre de la littérature commentés par les écrivains d'aujourd'hui}, \titre{Le Nouvel Observateur}, hors-série no 83, juin/juillet 2013, \enquote{La Bibliothèque idéale (2): \siecle{xix}{e} et \siecle{xx}{e} siècle}.}.
+
+
+
+\mainmatter
+
+\begin{pages}
+    \begin{Leftside}
+    \begin{english}
+        \beginnumbering
+        \pstart
+        \chapter{}
+        \pend
+        \pstart
+It is a truth universally acknowledged, that a single man in possession of a good fortune must be in want of a wife.
+
+However little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered as the rightful property of some one or other of their daughters.
+
+“My dear Mr. Bennet,” said his lady to him one day, “have you heard that Netherfield Park is let at last?”
+
+Mr. Bennet replied that he had not.
+
+“But it is,” returned she; “for Mrs. Long has just been here, and she told me all about it.”
+
+Mr. Bennet made no answer.
+
+“Do you not want to know who has taken it?” cried his wife impatiently.
+
+“You want to tell me, and I have no objection to hearing it.”
+
+This was invitation enough.
+
+“Why, my dear, you must know, Mrs. Long says that Netherfield is taken by a young man of large fortune from the north of England; that he came down on Monday in a chaise and four to see the place, and was so much delighted with it that he agreed with Mr. Morris immediately; that he is to take possession before Michaelmas, and some of his servants are to be in the house by the end of next week.”
+
+“What is his name?”
+
+“Bingley.”
+
+“Is he married or single?”
+
+“Oh! Single, my dear, to be sure! A single man of large fortune; four or five thousand a-year. What a fine thing for our girls!”
+
+“How so? how can it affect them?"
+
+“My dear Mr. Bennet,” replied his wife, “how can you be so tiresome! You must know that I am thinking of his marrying one of them.”
+
+“Is that his design in settling here?"
+
+“Design! Nonsense, how can you talk so! But it is very likely that he may fall in love with one of them, and therefore you must visit him as soon as he comes."
+
+"I see no occasion for that. You and the girls may go, or you may send them by themselves, which perhaps will be still better, for as you are as handsome as any of them, Mr. Bingley may like you the best of the party."
+
+"My dear, you flatter me. I certainly have had my share of beauty, but I do not pretend to be anything extraordinary now. When a woman has five grown-up daughters, she ought to give over thinking of her own beauty."
+
+"In such cases, a woman has not often much beauty to think of."
+
+"But, my dear, you must indeed go and see Mr. Bingley when he comes into the neighbourhood."
+
+"It is more than I engage for, I assure you."
+
+"But consider your daughters. Only think what an establishment it would be for one of them. Sir William and Lady Lucas are determined to go, merely on that account, for in general you know they visit no newcomers. Indeed you must go, for it will be impossible for us to visit him, if you do not."
+
+"You are over scrupulous surely. I dare say Mr. Bingley will be very glad to see you; and I will send a few lines by you to assure him of my hearty consent to his marrying whichever he chuses of the girls; though I must throw in a good word for my little Lizzy."
+
+"I desire you will do no such thing. Lizzy is not a bit better than the others; and I am sure she is not half so handsome as Jane, nor half so good-humoured as Lydia. But you are always giving her the preference."
+
+"They have none of them much to recommend them," replied he; "they are all silly and ignorant like other girls; but Lizzy has something more of quickness than her sisters."
+
+"Mr. Bennet, how can you abuse your own children in such a way? You take delight in vexing me. You have no compassion for my poor nerves."
+
+"You mistake me, my dear. I have a high respect for your nerves. They are my old friends. I have heard you mention them with consideration these last twenty years at least."
+
+"Ah! you do not know what I suffer."
+
+"But I hope you will get over it, and live to see many young men of four thousand a-year come into the neighbourhood."
+
+"It will be no use to us, if twenty such should come, since you will not visit them."
+
+"Depend upon it, my dear, that when there are twenty, I will visit them all."
+
+Mr. Bennet was so odd a mixture of quick parts, sarcastic humour, reserve, and caprice, that the experience of three and twenty years had been insufficient to make his wife understand his character. Her mind was less difficult to develope. She was a woman of mean understanding, little information, and uncertain temper. When she was discontented she fancied herself nervous. The business of her life was to get her daughters married; its solace was visiting and news.
+        \pend
+        
+        \pstart
+        \chapter{}
+        \pend
+        \pstart
+        Mr. Bennet was among the earliest of those who waited on Mr. Bingley. He had always intended to visit him, though to the last always assuring his wife that he should not go; and till the evening after the visit was paid she had no knowledge of it. It was then disclosed in the following manner. Observing his second daughter employed in trimming a hat, he suddenly addressed her with,
+
+"I hope Mr. Bingley will like it, Lizzy."
+
+"We are not in a way to know what Mr. Bingley likes," said her mother resentfully, "since we are not to visit."
+
+"But you forget, mamma," said Elizabeth, "that we shall meet him at the assemblies, and that Mrs. Long promised to introduce him."
+
+"I do not believe Mrs. Long will do any such thing. She has two nieces of her own. She is a selfish, hypocritical woman, and I have no opinion of her."
+
+"No more have I," said Mr. Bennet; "and I am glad to find that you do not depend on her serving you."
+
+Mrs. Bennet deigned not to make any reply; but, unable to contain herself, began scolding one of her daughters.
+
+"Don't keep coughing so, Kitty, for heaven's sake! Have a little compassion on my nerves. You tear them to pieces."
+
+"Kitty has no discretion in her coughs," said her father; "she times them ill."
+
+"I do not cough for my own amusement," replied Kitty fretfully. "When is your next ball to be, Lizzy?"
+
+"To-morrow fortnight."
+
+"Aye, so it is," cried her mother, "and Mrs. Long does not come back till the day before; so it will be impossible for her to introduce him, for she will not know him herself."
+
+"Then, my dear, you may have the advantage of your friend, and introduce Mr. Bingley to her."
+
+"Impossible, Mr. Bennet, impossible, when I am not acquainted with him myself; how can you be so teazing?"
+
+"I honour your circumspection. A fortnight's acquaintance is certainly very little. One cannot know what a man really is by the end of a fortnight. But if we do not venture somebody else will; and after all, Mrs. Long and her nieces must stand their chance; and, therefore, as she will think it an act of kindness, if you decline the office, I will take it on myself."
+
+The girls stared at their father. Mrs. Bennet said only, "Nonsense, nonsense!"
+
+"What can be the meaning of that emphatic exclamation?" cried he. "Do you consider the forms of introduction, and the stress that is laid on them, as nonsense? I cannot quite agree with you there. What say you, Mary? for you are a young lady of deep reflection, I know, and read great books and make extracts."
+
+Mary wished to say something sensible, but knew not how.
+
+"While Mary is adjusting her ideas," he continued, "let us return to Mr. Bingley."
+
+"I am sick of Mr. Bingley," cried his wife.
+
+"I am sorry to hear that; but why did not you tell me that before? If I had known as much this morning I certainly would not have called on him. It is very unlucky; but as I have actually paid the visit, we cannot escape the acquaintance now."
+
+The astonishment of the ladies was just what he wished; that of Mrs. Bennet perhaps surpassing the rest; though, when the first tumult of joy was over, she began to declare that it was what she had expected all the while.
+
+"How good it was in you, my dear Mr. Bennet. But I knew I should persuade you at last. I was sure you loved your girls too well to neglect such an acquaintance. Well, how pleased I am! and it is such a good joke, too, that you should have gone this morning and never said a word about it till now."
+
+"Now, Kitty, you may cough as much as you chuse," said Mr. Bennet; and, as he spoke, he left the room, fatigued with the raptures of his wife.
+
+"What an excellent father you have, girls!" said she; when the door was shut. "I do not know how you will ever make him amends for his kindness; or me either, for that matter. At our time of life it is not so pleasant, I can tell you, to be making new acquaintance every day; but for your sakes, we would do any thing. Lydia, my love, though you are the youngest, I dare say Mr. Bingley will dance with you at the next ball."
+
+"Oh!" said Lydia stoutly, "I am not afraid; for though I am the youngest, I'm the tallest."
+
+The rest of the evening was spent in conjecturing how soon he would return Mr. Bennet's visit, and determining when they should ask him to dinner.
+        \pend
+        \endnumbering
+    \end{english}
+    \end{Leftside}
+
+    \begin{Rightside} 
+        \beginnumbering
+        \pstart
+        \chapter{} 
+        \pend
+        \pstart
+S’il est une idée généralement reçue, c’est qu’un homme fort riche doit penser à se marier.
+
+Quelque peu connues que soient ses habitudes et ses intentions, cette idée est si fortement gravée dans l’esprit de toutes les familles du pays dans lequel il se fixe, qu’il est à l’instant considéré comme la propriété légitime des jeunes personnes qui l’habitent. Il ne s’agit plus que de savoir laquelle fixera son attention.
+
+Mon cher Monsieur Bennet, dit un jour Mistriss Bennet à son mari, avez-vous ouï dire que Netherfield-Parck fût enfin loué ?
+
+Monsieur Bennet répondit qu’il n’en avoit pas entendu parler.
+
+Cela est ainsi cependant, car je le tiens de Mistriss Long, qui sort d’ici.
+
+M. Bennet ne répondit pas.
+
+Mais ne désirez-vous donc point savoir à qui, s’écria sa femme avec impatience ? — Vous désirez me le dire ; et je n’ai aucune raison de vous refuser de l’entendre. — C’étoit un encouragement suffisant pour Mistriss Bennet. Vous saurez donc, mon cher, que Netherfield-Parck vient d’être loué par un jeune seigneur fort riche ; il arriva lundi, en voiture à quatre chevaux, dans l’intention de voir la maison ; il en fut si enchanté que, de suite il convint du prix et des conditions avec M. Morris, qu’il doit en prendre possession avant un mois, et qu’il enverra plusieurs de ses domestiques pour faire les préparatifs nécessaires à la fin de la semaine prochaine.
+
+— Quel est son nom ?
+
+— Bingley.
+
+— Est-il marié ?
+
+— Non, certainement, mon cher ! Un homme qui a une grande fortune, quatre ou cinq mille livres sterlings, peut-être ; quelle bonne affaire pour mes filles !
+
+— Comment, quel rapport a-t-il donc avec elles ? — Mon cher Monsieur Bennet, que vous êtes désagréable ; ne voyez-vous pas que je pense à lui en faire épouser une ?
+
+— Est-ce son intention en venant s’établir ici ?
+
+— Son intention, quelle absurdité ! Comment pouvez-vous parler ainsi ? Il ne les connoît pas ; mais il est très-probable qu’il deviendra fort amoureux de l’une d’elles. Ainsi, vous devez lui faire une visite aussitôt qu’il sera arrivé. — Je ne vois pas que ce soit nécessaire ; vous et vos filles, à la bonne heure, et peut-être même seroit-il encore mieux de les y envoyer seules ; votre beauté pourroit leur faire tort. Il seroit fâcheux que M. Bingley vous donnât la préférence.
+
+— Vous me flattez, mon cher Monsieur Bennet, je n’ai certainement pas à me plaindre ; j’ai été très-belle dans mon temps, mais, à présent, je ne crois pas être fort remarquable. Lorsqu’une femme a cinq grandes filles, elle ne doit plus penser à sa beauté. Il est bien rare alors qu’elle puisse s’en occuper, à moins que ce ne soit pour en déplorer la perte.
+
+Mais, mon cher, vous devez vraiment aller voir M. Bingley dès qu’il sera dans notre voisinage.
+
+— C’est plus que je ne puis promettre.
+
+— Songez donc à vos filles ! Pensez au bel établissement que ce seroit pour l’une d’elles ! Sir Williams et Lady Laws sont décidés à lui faire visite sur ce qu’ils en ont ouï dire seulement ; vous savez qu’en général, ils ne recherchent point les nouveaux venus, et vous devez faire de même, car il nous seroit impossible d’être en relation avec lui, si vous ne commencez pas.
+
+— Vous êtes trop scrupuleuse, je crois que M. Bingley seroit charmé de vous voir, et je pourrais même vous charger de quelques lignes pour l’assurer de mon consentement à son mariage avec celle de mes filles qu’il choisira ; quoique cependant je dusse dire un mot en faveur de ma chère petite Lizzy.
+
+— Je vous prie de ne point le faire. Lizzy n’est pas supérieure aux autres ; elle n’est à beaucoup près ni si belle que Jane, ni si gaie que Lydie ; mais vous lui donnez toujours la préférence.
+
+— On ne peut tirer vanité ni des unes ni des autres, répliqua-t-il, elles sont sottes et ignorantes comme toutes les jeunes filles, mais Lizzy a quelque chose de plus animé que ses sœurs.
+
+— Je ne sais quelle jouissance vous avez à rabaisser ainsi vos enfans, Monsieur Bennet ? Il semble que vous preniez plaisir à me faire de la peine. Vous n’avez aucun égard pour mes pauvres nerfs.
+
+— Pardonnez-moi, ma chère, j’ai beaucoup de respect pour vos nerfs. Ce sont pour moi d’anciennes connaissances. Depuis vingt ans au moins, je vous en entends parler avec considération.
+
+— Vous ne savez pas ce que je souffre !
+
+— J’espère, ma chère, que vous vous guérirez et que vous vivrez encore longtemps pour voir beaucoup de jeunes seigneurs, jouissant de quatre ou cinq mille livres de rentes, venir s’établir dans notre voisinage.
+
+— Il en arriveroit vingt, que cela nous seroit bien inutile, puisque vous ne voulez pas seulement aller leur faire une visite.
+
+— Vous pouvez compter, ma chère, que, lorsqu’il y en aura vingt, j’irai les voir tous.
+
+M. Bennet offroit un mélange si extraordinaire de réparties promptes, d’humeur railleuse, de réserve et de caprices, que vingt-trois ans de mariage n’avoient pas suffi à sa femme pour bien connoître son caractère. Elle étoit moins difficile à définir. C’étoit une femme ignorante, d’une intelligence médiocre, et d’un caractère foible. Lorsqu’elle étoit mécontente, elle se plaignoit de ses nerfs. Son désir le plus ardent étoit de voir ses filles mariées ; sa principale occupation les visites, et son plaisir les nouvelles.
+        \pend
+        
+        \pstart
+        \chapter{}
+        \pend
+        \pstart
+		Monsieur Bennet fut un de ceux qui se montrèrent les plus empressés à rechercher M. Bingley. Son intention avoit toujours été d’aller chez lui, quoiqu’il eût assuré sa femme du contraire, mais elle n’eut connoissance de cette visite qu’après qu’elle fut faite, et voici comment : M. Bennet voyant sa seconde fille occupée à garnir un chapeau, lui dit : J’espère Lizzy que ce chapeau plaira à M. Bingley.
+
+— Nous ne saurons point ce qui plaît ou déplaît à M. Bingley, répondit Mistriss Bennet avec aigreur, puisque nous ne le verrons point.
+
+— Vous oubliez, maman, dit Elisabeth, que nous le rencontrerons dans les assemblées, et que Mistriss Long a promis de nous le présenter.
+
+— Je ne crois pas que Mistriss Long fasse jamais rien pour nous ; c’est une femme fausse, intéressée, d’ailleurs elle a deux nièces, et je ne compte point sur elle.
+
+— Ni moi, dit M. Bennet, je suis bien aise de voir que vous ne fondez pas vos espérances sur ses services.
+
+Mistriss Bennet ne daigna pas répondre, mais incapable de se contenir, elle commença à gronder une de ses filles.
+
+— Ne toussez donc pas ainsi Kitty, pour l’amour du Ciel, ayez pitié de moi, vous m’abîmez, les nerfs.
+
+— Kitty n’a aucune discrétion, dit son père, elle ne tousse jamais à propos.
+
+— Je ne tousse pas pour me divertir, répondit Kitty avec humeur.
+
+— Quand aura lieu votre premier, bal, Lizzy ?
+
+— De demain en quinze.
+
+— Est-il bien vrai, s’écria Mistriss Bennet ! Et Mistriss Long ne reviendra que la veille, il lui sera impossible de nous le présenter puisqu’elle ne l’aura point encore vu.
+
+— Alors, ma chère, vous aurez l’avantage sur votre amie, en lui présentant vous-même M. Bingley.
+
+— C’est impossible, M. Bennet, impossible ! comment pouvez-vous parler ainsi ?
+
+— J’admire votre circonspection, une relation qui ne date que de quinze jours est certainement très-peu approfondie ; on ne peut pas bien connoître un homme au bout de si peu de temps ; mais si vous ne hasardez rien, d’autres le feront. Après tout, Mistriss Long et ses nièces désirant tenter l’aventure, ce sera un acte de générosité de votre part de leur en présenter l’occasion. Si vous refusiez de leur rendre ce bon office, je m’en chargerois.
+
+Les jeunes filles regardoient leur père avec étonnement ; Mistriss Bennet se contenta de dire : Quelle absurdité ! — Que signifie cette expression emphatique, s’écria-t-il ? Pensez-vous que la formalité d’une présentation, et l’importance qu’on y attache soient des absurdités ? Je ne puis vraiment être de votre avis sur ce point ; qu’en dites-vous Mary ? Je sais que vous êtes une jeune personne qui a profondément réfléchi, qui a lu des livres très-sérieux et fait beaucoup d’extraits. Mary auroit bien désiré répondre quelque chose de très-judicieux, mais elle n’étoit pas préparée, et pendant qu’elle arrangeoit ses phrases, son père ajouta : Revenons à M. Bingley.
+
+— Je ne puis souffrir d’entendre parler de M. Bingley, cela me rend malade.
+
+— Je suis fâché d’apprendre cela. Pourquoi ne me l’avez-vous pas dit plutôt ? Si je l’avois su ce matin, je n’aurois sûrement pas été me présenter chez lui. C’est très-fâcheux, mais à présent que je lui ai fait visite, nous ne pouvons plus éviter de faire connoissance avec lui.
+
+L’étonnement de ces dames fut aussi grand que pouvoit le désirer M. Bennet ; celui de sa femme surtout, quoiqu’elle assurât, une fois le premier élan de sa joie passée, qu’elle s’y attendoit dès le premier jour.
+
+— Combien c’est aimable de votre part, mon cher Monsieur Bennet ! Je savois bien que je finirois par vous persuader ; j’étois sûre que vous aimiez trop vos filles pour négliger de faire une telle connoissance ! C’est cependant une singulière idée ; y être allé ce matin, et ne nous en avoir rien dit jusqu’à présent. — Maintenant Kitty vous pouvez tousser tant qu’il vous plaira. En disant ces mots, Monsieur Bennet, fatigué des transports de sa femme, sortit.
+
+— Quel excellent père vous avez, mes enfans, dit Mistriss Bennet, dès qu’il eut fermé la porte. Je ne sais comment vous pourrez lui témoigner, ainsi qu’à moi, toute votre reconnaissance ! Car je puis vous assurer qu’il n’est pas agréable à notre âge de faire chaque jour de nouvelles connoissances ; mais il n’y a rien que nous ne fassions pour vous. Lydie, mon ange, quoique vous soyez la cadette, je parie que M. Bingley dansera avec vous au premier bal. — Oh ! dit Lydie, je ne suis pas inquiète, quoique la plus jeune, je suis la plus grande. Le reste de la soirée se passa en conjectures sur le moment où il rendroit sa visite à M. Bennet, et à calculer quand on pourroit l’inviter à dîner.	        
+        \pend   
+	\endnumbering
+	\end{Rightside}
+	\end{pages}
+\Pages
+
+\backmatter
+	\tableofcontents
+
+
+\end{document}
