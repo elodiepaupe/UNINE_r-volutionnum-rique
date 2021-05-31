@@ -1,0 +1,123 @@
+\documentclass[french,10pt]{beamer} 
+	%handout permet d'afficher la présentation sans les effets
+	\setbeameroption{hide notes} % Only slides
+	%\setbeameroption{show notes} % les deux
+	%\setbeameroption{show only notes} % Only notes
+	
+\usepackage{xunicode}
+\usepackage{polyglossia}
+	\setmainlanguage[variant=swiss,frenchpart=false]{french}
+	
+\usepackage{graphicx}
+\usepackage{csquotes}
+
+\usepackage[citestyle=authoryear,bibstyle=verbose]{biblatex}
+\bibliography{../../bibliographie/histoiredulivrebiblio}
+
+\usepackage{bookmark}
+\usepackage{beamerthemesplit}
+    \usetheme{Singapore}
+    \usecolortheme{seahorse}
+
+\title[Cours 12]{TG: L'histoire du livre et sa troisième révolution (numérique)\\
+    cours 12: dernier atelier et conclusion}
+\author[EP]{Élodie Paupe}
+\institute{Master en littérature\\ semestre de printemps -- Université de Neuchâtel}
+\date{\today}
+\logo{\includegraphics[height=1cm]{data/UNINE_gris_pos.jpg}}
+%\begin{frame}[plain] permet d’ôter les en-têtes et pieds de page.
+%\begin{frame}[allowframebreaks] va couper un texte trop long et mettre la suite sur la page suivante.
+%\setbeamertemplate{navigation symbols}{} enlève les liens de navigation
+    
+    \AtBeginSection[] %pour faire apparaître le plan au début de chaque section
+    {
+      \begin{frame}
+      \frametitle{Plan de la séance}
+      \tableofcontents[currentsection, hideothersubsections]
+      \end{frame} 
+    }
+
+
+\begin{document}
+
+\begin{frame}
+    \maketitle
+\end{frame}
+
+\section{Révolution culturelle?}
+
+\frame{
+	\begin{quote}
+		La question qui pose en effet à leur sujet [les technologies numériques] est de savoir si celles-ci sont à l'origine d'une simple mutation progressive des usages, déjà maintes fois observée dans le passé ou au contraire si nous sommes face à une profond révolution culturelle affectant tous les secteurs de l'activité humaine. Simple inflexion des usages ou réelle rupture? Changement d'échelle ou changement de nature?
+	\end{quote}
+	\cite[262]{Rieffel2014}
+}
+
+\frame{
+	
+	\begin{itemize}[<+->]
+		\item Développement d'une nouvelle forme de sensibilité dite \enquote{connexionniste} et relationnelle
+		\item Des frontières entre créateurs et producteurs, consommateurs et récepteurs, experts et profanes qui s'estompent au profit d'une économie de la coopération
+		\item \enquote{concentration de la filière éditoriale} \parencite{Legendre2019}
+		\item Facilité d'accès aux contenus culturels et éclatement des modes de consommation (question de la complémentarité)
+		\item Environnement favorisant la \enquote{force des coopérations faibles}, la démocratie par le bas ou horizontale
+	\end{itemize}
+}
+
+\section{Écologie du livre numérique}
+\frame{
+	\begin{quote}
+		Depuis 2011, \textit{Amazon} vend plus de livres numériques que de livres sur papier, et s'oriente peu à peu vers une activité proprement éditoriale.
+	\end{quote}
+	\cite{Barbier2020}[381]
+}
+
+\frame{
+	\frametitle{Réaction}
+	\begin{itemize}[<+->]
+		\item Maintien d'un réseau de librairies professionnelles pour écouler les ouvrages plus pointus vs la vente en supermarché qui se concentre sur les \textit{best-sellers}/la vente en ligne
+		\item Contrôle de la production et de sa circulation (\enquote{censure}?) dans un contexte où Internet n'est pas considéré comme un canal aussi fiable que les autres, 23\% (Baromètre des médias 2020)
+	\end{itemize}
+}
+
+\frame{
+	\begin{figure}
+		\includegraphics[width=10cm]{data/baromètre_fiabilité.jpg}
+		\caption{\textit{Baromètre 2021 de la confiance des Français dans les médias}, \url{https://www.kantar.com/fr/inspirations/publicite-medias-et-rp/2021-barometre-de-la-confiance-des-francais-dans-les-media}}
+	\end{figure}
+}
+
+\frame{
+	\frametitle{Réaction}
+	\begin{itemize}[<+->]
+		\item Interrogation du côté de la sécurité des données, du droit d'auteur, du droit individuel, etc. 
+		\item Interrogation à propos de la santé mentale et physique avec le recours systématique aux écrans
+		\item Interrogations en ce qui concerne le développement de la mémoire
+		\item Reconfiguration de l'information et de la communication autour de l'écrit (vs les discours alarmistes sur la fin du livre ou de la presse)
+		\item Un faux sentiment d'universalité qui se heurte à des constructions culturelles hétérogènes dans les pays
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Mort du livre?}
+	\begin{quote}
+		S'il apparaît de plus en plus manifeste que la période des discours prophétiques annonçant la mort du livre et son remplacement par les supports et la lecture numérique est désormais révolue, la tentation de refermer ce qui apparaîtrait comme une simple parenthèses n'est pas pour autant de mise. Autant, comme on l'a vu, la \enquote{révolution numérique} de la production éditoriale concerne de manière très inégale les différentes catégories de contenus éditoriaux, autant, dans le prolongement des pratiques promotionnelles, la commercialisation du livre connaît des transformations en profondeur.
+	\end{quote}
+	\cite{Legendre2019}[99]
+}
+\note{Question de la TVA et du prix de vente du livre. Quelle répartition de la valeur le long de la chaîne du livre? Nouvelles façons de consommer avec des bouquets? }
+
+\section{Conclusion}
+\frame{
+	\frametitle{Édition numérique entre temps bref et temps long}
+	\begin{itemize}
+		\item Temps bref caractérisé par l'instabilité et les avancées technologiques récentes 
+		\item Temps long nécessaire à l'adaptation afin de juger des effets de la \enquote{révolution}
+	\end{itemize}
+}
+
+
+\frame{\printbibliography}
+
+
+\end{document}

@@ -1,0 +1,101 @@
+\documentclass[french,10pt]{beamer} 
+	%handout permet d'afficher la présentation sans les effets
+	%\setbeameroption{hide notes} % Only slides
+	\setbeameroption{show notes} % les deux
+	%\setbeameroption{show only notes} % Only notes
+	
+\usepackage{xunicode}
+\usepackage{polyglossia}
+	\setmainlanguage[variant=swiss]{french}
+	
+\usepackage{graphicx}
+
+\usepackage{bookmark}
+\usepackage{beamerthemesplit}
+    \usetheme{Singapore}
+    \usecolortheme{seahorse}
+
+\title[Cours 12]{TG: L'histoire du livre et sa troisième révolution (numérique)\\
+    cours 12: dernier atelier}
+\author[EP]{Élodie Paupe}
+\institute{Master en littérature\\ semestre de printemps -- Université de Neuchâtel}
+\date{\today}
+\logo{\includegraphics[height=1cm]{UNINE_gris_pos.jpg}}
+%\begin{frame}[plain] permet d’ôter les en-têtes et pieds de page.
+%\begin{frame}[allowframebreaks] va couper un texte trop long et mettre la suite sur la page suivante.
+%\setbeamertemplate{navigation symbols}{} enlève les liens de navigation
+    
+    \AtBeginSection[] %pour faire apparaître le plan au début de chaque section
+    {
+      \begin{frame}
+      \frametitle{Plan de la séance}
+      \tableofcontents[currentsection, hideothersubsections]
+      \end{frame} 
+    }
+
+
+\begin{document}
+
+\begin{frame}
+    \maketitle
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}
+    Ici, la première diapositive après celle de titre
+\end{frame}
+
+\begin{frame}
+    Ici un premier paragraphe
+    \pause
+    
+    Puis un deuxième
+    \pause 
+    
+    Puis un troisième
+	\pause
+	
+	Puis du texte et de l'image.
+	\includegraphics[height=1cm]{UNINE_gris_pos.jpg}    
+    
+\end{frame}
+
+\section{Première partie}
+
+\begin{frame}
+    \onslide<2>
+    Ici un premier paragraphe
+    
+    \onslide<1->
+    Puis un deuxième
+    
+    \onslide<3->
+    Puis un troisième
+	
+	\onslide<4>
+	Puis du texte et de l'image.
+	
+	\includegraphics[height=1cm]{UNINE_gris_pos.jpg}    
+    
+\end{frame}
+
+\begin{frame}
+    \begin{itemize}
+        \item<1-> Premier élément
+        \item<2> Deuxième élément
+        \item<3> Troisième élément
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \begin{itemize}[<+->]
+        \item Premier élément
+        \item \alert<3>{Deuxième élément}
+        \item Troisième élément
+    \end{itemize}
+\end{frame}
+\note{
+Ici un petit blabla de note.}
+
+\end{document}
